@@ -387,7 +387,7 @@ height:58px;
 <audio
 id="music"
 loop
-autoplay>
+preload="auto">
 
 <source
 src="song.mp3"
@@ -438,7 +438,7 @@ we're getting married
 <section class="section">
 
 <h2 class="gameTitle">
-Noor is trying to escape from Mostafa Help Her !!!
+Noor is trying to escape from Mostafa!!!
 </h2>
 
 <div class="progress-wrap">
@@ -483,7 +483,7 @@ allowfullscreen>
 
 <textarea
 id="message"
-placeholder="Advice... jokes...">
+placeholder="Advice... jokes...💌 ">
 </textarea>
 
 <button
@@ -832,7 +832,80 @@ popup.style.display=
     })
     
     }
-    
+    const music=
+document.getElementById("music")
+
+const musicBtn=
+document.getElementById("musicBtn")
+
+
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play()
+.then(()=>{
+
+musicBtn.innerHTML=
+"⏸️"
+
+})
+.catch(err=>{
+
+console.log(err)
+
+})
+
+}else{
+
+music.pause()
+
+musicBtn.innerHTML=
+"▶️"
+
+}
+
+}
+
+
+
+// first interaction anywhere starts music
+
+function startMusicOnce(){
+
+music.play()
+.then(()=>{
+
+musicBtn.innerHTML=
+"⏸️"
+
+})
+.catch(()=>{})
+
+
+document.removeEventListener(
+"click",
+startMusicOnce
+)
+
+document.removeEventListener(
+"touchstart",
+startMusicOnce
+)
+
+}
+
+
+document.addEventListener(
+"click",
+startMusicOnce
+)
+
+document.addEventListener(
+"touchstart",
+startMusicOnce
+)
     
     
     function draw(){
