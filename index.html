@@ -387,7 +387,7 @@ height:58px;
 <audio
 id="music"
 loop
-preload="auto">
+autoplay>
 
 <source
 src="song.mp3"
@@ -421,12 +421,12 @@ we're getting married
 
 <div class="desc">
 
-💍 Welcome to our wedding adventure 💍
+💍 AL - Qasr Palace 💍
 
 <br><br>
 
-📅 09/09/2026
-🕕 6:00 PM — Monday
+📅 23/09/2026
+🕕 08:00 PM — Wednesday
 
 </div>
 
@@ -438,7 +438,7 @@ we're getting married
 <section class="section">
 
 <h2 class="gameTitle">
-Noor is trying to escape from Mostafa!!!
+Noor is trying to escape from Mostafa !!!
 </h2>
 
 <div class="progress-wrap">
@@ -455,6 +455,32 @@ Noor is trying to escape from Mostafa!!!
 
 
 <section class="section">
+
+    <section class="section">
+
+        <h2 class="gameTitle">
+        💌 Leave us a message
+        </h2>
+        
+        <div class="card">
+        
+        <iframe
+        src="https://forms.office.com/r/Yn0Yy4pSdA?embed=true"
+        width="100%"
+        height="650px"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        style="border:none; max-width:100%;"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        msallowfullscreen>
+        </iframe>
+        
+        </div>
+        
+        </section>
 
 <h2 class="gameTitle">
 📍 Find Us
@@ -473,30 +499,6 @@ allowfullscreen>
 </section>
 
 
-<section class="section">
-
-<h2 class="gameTitle">
-💌 Leave us a message
-</h2>
-
-<div class="card">
-
-<textarea
-id="message"
-placeholder="Advice... jokes...💌 ">
-</textarea>
-
-<button
-class="btn"
-onclick="saveComment()">
-Send 💌
-</button>
-
-<div id="comments"></div>
-
-</div>
-
-</section>
 
 
 <script>
@@ -832,80 +834,7 @@ popup.style.display=
     })
     
     }
-    const music=
-document.getElementById("music")
-
-const musicBtn=
-document.getElementById("musicBtn")
-
-
-
-function toggleMusic(){
-
-if(music.paused){
-
-music.play()
-.then(()=>{
-
-musicBtn.innerHTML=
-"⏸️"
-
-})
-.catch(err=>{
-
-console.log(err)
-
-})
-
-}else{
-
-music.pause()
-
-musicBtn.innerHTML=
-"▶️"
-
-}
-
-}
-
-
-
-// first interaction anywhere starts music
-
-function startMusicOnce(){
-
-music.play()
-.then(()=>{
-
-musicBtn.innerHTML=
-"⏸️"
-
-})
-.catch(()=>{})
-
-
-document.removeEventListener(
-"click",
-startMusicOnce
-)
-
-document.removeEventListener(
-"touchstart",
-startMusicOnce
-)
-
-}
-
-
-document.addEventListener(
-"click",
-startMusicOnce
-)
-
-document.addEventListener(
-"touchstart",
-startMusicOnce
-)
+    
     
     
     function draw(){
